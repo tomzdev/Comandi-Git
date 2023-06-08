@@ -1,65 +1,72 @@
-Git Commands
+Comandi Git
 ============
 
-_A list of my commonly used Git commands_
+_Un elenco dei miei comandi Git comunemente usati_
 
 --
 
-### Getting & Creating Projects
+### Configurazioni di base di git
 
-| Command | Description |
+| Comando | Descrizione |
 | ------- | ----------- |
-| `git init` | Initialize a local Git repository |
-| `git clone ssh://git@github.com/[username]/[repository-name].git` | Create a local copy of a remote repository |
+| `git config --global user.name 'Tuo Nome GitHub'` | Configura git con il tuo nome utente  |
+| `git config --global user.email email@github.com` | Configura git con il tuo indirizzo mail |
 
-### Basic Snapshotting
+### Creare o clonare progetti
 
-| Command | Description |
+| Comando | Descrizione |
 | ------- | ----------- |
-| `git status` | Check status |
-| `git add [file-name.txt]` | Add a file to the staging area |
-| `git add -A` | Add all new and changed files to the staging area |
-| `git commit -m "[commit message]"` | Commit changes |
-| `git rm -r [file-name.txt]` | Remove a file (or folder) |
+| `git init` | Inizializza un repository Git locale |
+| `git clone ssh://git@github.com/[username]/[repository-name].git` | Crea una copia locale di un repository remoto |
 
-### Branching & Merging
+### Snapshot di base
 
-| Command | Description |
+| Comando | Descrizione |
 | ------- | ----------- |
-| `git branch` | List branches (the asterisk denotes the current branch) |
-| `git branch -a` | List all branches (local and remote) |
-| `git branch [branch name]` | Create a new branch |
-| `git branch -d [branch name]` | Delete a branch |
-| `git push origin --delete [branch name]` | Delete a remote branch |
-| `git checkout -b [branch name]` | Create a new branch and switch to it |
-| `git checkout -b [branch name] origin/[branch name]` | Clone a remote branch and switch to it |
-| `git branch -m [old branch name] [new branch name]` | Rename a local branch |
-| `git checkout [branch name]` | Switch to a branch |
-| `git checkout -` | Switch to the branch last checked out |
-| `git checkout -- [file-name.txt]` | Discard changes to a file |
-| `git merge [branch name]` | Merge a branch into the active branch |
-| `git merge [source branch] [target branch]` | Merge a branch into a target branch |
-| `git stash` | Stash changes in a dirty working directory |
-| `git stash clear` | Remove all stashed entries |
+| `git status` | Controllare lo stato |
+| `git add [file-name.txt]` | Aggiungi un file all'area di staging |
+| `git add -A` | Aggiungi tutti i file nuovi e modificati all'area di staging |
+| `git commit -m "[commit message]"` | Confermare le modifiche |
+| `git rm -r [file-name.txt]` | Rimuovi un file ( o cartella ) |
 
-### Sharing & Updating Projects
+### Rami e fusione
 
-| Command | Description |
+| Comando | Descrizione |
 | ------- | ----------- |
-| `git push origin [branch name]` | Push a branch to your remote repository |
-| `git push -u origin [branch name]` | Push changes to remote repository (and remember the branch) |
-| `git push` | Push changes to remote repository (remembered branch) |
-| `git push origin --delete [branch name]` | Delete a remote branch |
-| `git pull` | Update local repository to the newest commit |
-| `git pull origin [branch name]` | Pull changes from remote repository |
-| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
-| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
+| `git branch` | Elenca i rami ( l'asterisco indica il ramo corrente ) |
+| `git branch -a` | Elencare tutti i rami ( locale e remoto ) |
+| `git branch [branch name]` | Crea un nuovo ramo |
+| `git branch -d [branch name]` | Elimina un ramo |
+| `git push origin --delete [branch name]` | Elimina un ramo remoto |
+| `git checkout -b [branch name]` | Crea un nuovo ramo e passa ad esso |
+| `git checkout -b [branch name] origin/[branch name]` | Clonare un ramo remoto e passare ad esso |
+| `git branch -m [old branch name] [new branch name]` | Rinomina una ramo |
+| `git checkout [branch name]` | Passa a un ramo |
+| `git checkout -` | Passa al ramo verificato l'ultima volta |
+| `git checkout -- [file-name.txt]` | Scartare le modifiche in un file |
+| `git merge [branch name]` | Unisci un ramo nel ramo attivo |
+| `git merge [source branch] [target branch]` | Unisci un ramo in un ramo di destinazione |
+| `git stash` | Nascondi le modifiche in una directory di lavoro "sporca" |
+| `git stash clear` | Rimuovi tutte le voci nascoste |
 
-### Inspection & Comparison
+### Condivisione e aggiornamento di progetti
 
-| Command | Description |
+| Comando | Descrizione |
 | ------- | ----------- |
-| `git log` | View changes |
-| `git log --summary` | View changes (detailed) |
-| `git log --oneline` | View changes (briefly) |
-| `git diff [source branch] [target branch]` | Preview changes before merging |
+| `git push origin [branch name]` | Invia un ramo al tuo repository remoto |
+| `git push -u origin [branch name]` | Invia le modifiche al repository remoto (e ricorda il ramo) |
+| `git push` | Invio delle modifiche al repository remoto (ramo ricordato) |
+| `git push origin --delete [branch name]` | Elimina un ramo remoto |
+| `git pull` | Aggiorna il repository locale al commit più recente |
+| `git pull origin [branch name]` | Aggiorna le modifiche dal repository remoto |
+| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Aggiungi un repository remoto |
+| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Imposta il ramo di origine di un repository su SSH |
+
+### Ispezione e confronto
+
+| Comando | Descrizione |
+| ------- | ----------- |
+| `git log` | Visualizza le modifiche |
+| `git log --summary` | Visualizza modifiche (dettagliate) |
+| `git log --oneline` | Visualizza le modifiche (brevemente) |
+| `git diff [source branch] [target branch]` | Anteprima delle modifiche prima dell'unione |
