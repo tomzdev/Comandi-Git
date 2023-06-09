@@ -38,7 +38,7 @@ _Un elenco dei miei comandi Git comunemente usati_
 | `git branch` | Elenca i rami ( l'asterisco indica il ramo corrente ) |
 | `git branch -a` | Elencare tutti i rami ( locale e remoto ) |
 | `git branch [branch name]` | Crea un nuovo ramo |
-| `git branch origin [branch name]` | Crea un nuovo ramo remoto |
+| `git push origin [branch name]` | Crea un nuovo ramo remoto (dopo averlo creato localmente) |
 | `git branch -d [branch name]` | Elimina un ramo |
 | `git push origin --delete [branch name]` | Elimina un ramo remoto |
 | `git checkout -b [branch name]` | Crea un nuovo ramo e passa ad esso |
