@@ -19,7 +19,7 @@ _Un elenco dei miei comandi Git comunemente usati_
 | `git init` | Inizializza un repository Git locale |
 | `git clone ssh://git@github.com/[username]/[repository-name].git` | Crea una copia locale di un repository remoto |
 
-### Snapshot di base
+### Comandi principali
 
 | Comando | Descrizione |
 | ------- | ----------- |
@@ -28,8 +28,8 @@ _Un elenco dei miei comandi Git comunemente usati_
 | `git add -A` | Aggiungi tutti i file nuovi e modificati all'area di staging |
 | `git commit -m "[commit message]"` | Confermare le modifiche |
 | `git push` | Invia tutte le mmodifiche confermate |
-| `git rm -r [file-name.txt]` | Rimuovi un file ( o cartella ) |
 | `git commit -a -m "[commit message]"` | Unisce i comandi `git add -A` e `git commit -m "[commit message]"` |
+| `git rm -r [file-name.txt]` | Rimuovi un file ( o cartella ) |
 
 ### Rami e fusione
 
